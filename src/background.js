@@ -12,6 +12,7 @@ const imgs = [
 ];
 
 const bgImg = imgs[Math.floor(Math.random() * imgs.length)];
+
 document.body.style.backgroundImage = `url(img/${bgImg})`;
 document.body.style.backgroundSize = "100% 100vh";
 document.body.style.backgroundRepeat = "no-repeat";
