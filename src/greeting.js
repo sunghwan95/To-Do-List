@@ -3,7 +3,7 @@ const inputBox = document.querySelector(".login-form-container");
 const inputName = document.querySelector(".input-name");
 const sayHello = document.querySelector("#login-form h1");
 
-const USERNAME_KEY = "username_key";
+const USERNAME_KEY = "username-key";
 
 function greeting(event) {
   event.preventDefault();

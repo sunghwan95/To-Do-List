@@ -1,25 +1,35 @@
 const listForm = document.querySelector("#list-form");
+const inputTodos = document.querySelector("#list-form input:first-child");
 const toDoList = document.querySelector("#to-do-list");
 
-const listItemArr = [];
+let toDoListArr = [];
 
-function handleSubmitList(event) {
+function handleSubmitInput(event) {
   event.preventDefault();
-  const inputList = document.querySelector("#list-form input:first-child");
-  const listItem = inputList.value;
+  const listItemsValue = inputTodos.value;
+  inputTodos.value = "";
+  const listItemsValueObj = {
+    id: Date.now(),
+    content: listItemsValue,
+  };
+  toDoListArr.push(listItemsValueObj);
   const li = document.createElement("li");
+  li.id = listItemsValueObj.id;
+  const span = document.createElement("span");
+  span.innerText = listItemsValueObj.content;
   const button = document.createElement("button");
-  toDoList.appendChild(li);
-  li.innerText = listItem;
-  li.appendChild(button);
   button.innerText = "❌";
-  listItemArr.push(listItem);
-  inputList.value = "";
-  localStorage.setItem("list_items", JSON.stringify(listItemArr));
+  li.appendChild(span);
+  li.appendChild(button);
+  toDoList.appendChild(li);
+  localStorage.setItem("list-item", JSON.stringify(toDoListArr));
 
-  button.addEventListener("click", function () {
-    toDoList.removeChild(li);
-  });
+  button.addEventListener("click", removeListItem);
 }
 
-listForm.addEventListener("submit", handleSubmitList);
+function removeListItem(event) {
+  const li = event.target.parentElement;
+  li.remove();
+}
+
+listForm.addEventListener("submit", handleSubmitInput);
