@@ -7,9 +7,9 @@ function geoSuccess(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const weather = document.querySelector("#weather h1:first-child");
-      const city = document.querySelector("#weather h1:last-child");
-      city.innerText = `내 위치 : ${data.name}`;
+      const weather = document.querySelector(".weather h1:first-child");
+      const city = document.querySelector(".weather h1:last-child");
+      city.innerText = `My location : ${data.name}`;
       weather.innerText = `날씨 : ${data.weather[0].main} / 온도 : ${data.main.temp}°C`;
     });
 }

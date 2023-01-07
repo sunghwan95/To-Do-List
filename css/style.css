@@ -1,4 +1,4 @@
-/*@import "reset.css";*/
+@import "reset.css";
 * {
   box-sizing: border-box;
 }
@@ -9,4 +9,101 @@
 .background-img {
   width: 100%;
   height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  color: snow;
+}
+
+.date {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+.date h1 {
+  font-size: 300%;
+  font-weight: 600;
+  -webkit-text-stroke: 2px black;
+}
+.weather {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+.weather h1 {
+  font-size: 200%;
+  font-weight: 600;
+  -webkit-text-stroke: 2px black;
+}
+.clock {
+  margin-top: 300px;
+  margin-bottom: 100px;
+}
+.clock h1 {
+  font-size: 350%;
+  font-weight: 600;
+  -webkit-text-stroke: 2px black;
+}
+#login-form h1 {
+  font-size: 400%;
+  font-weight: 600;
+  padding-bottom: 50px;
+  -webkit-text-stroke: 2px black;
+}
+.login-form-container {
+  margin-bottom: 50px;
+}
+.login-form-container input:first-child {
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 5px 10px 20px black;
+}
+.login-form-container input:last-child {
+  width: auto;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 5px 10px 20px black;
+  cursor: pointer;
+}
+.login-form-container input:first-child::placeholder {
+  font-size: 200%;
+}
+
+#list-form input:first-child::placeholder {
+  font-size: 150%;
+}
+#list-form input:first-child {
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 5px 10px 20px black;
+}
+#list-form input:last-child {
+  width: auto;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 5px 10px 20px black;
+  cursor: pointer;
+}
+footer {
+  position: absolute;
+  bottom: 00px;
+  left: 00px;
+}
+.quote {
+  font-size: 250%;
+  font-weight: 600;
+  margin-bottom: 20px;
+  -webkit-text-stroke: 2px black;
+}
+.quote-number {
+  font-size: 200%;
+  -webkit-text-stroke: 1px black;
 }
