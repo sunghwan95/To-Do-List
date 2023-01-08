@@ -10,7 +10,7 @@ function greeting(event) {
   const nameValue = inputName.value;
   localStorage.setItem(USERNAME_KEY, nameValue);
   inputBox.classList.add("hidden");
-  sayHello.innerText = `Hello ${nameValue}!`;
+  sayHello.innerText = `Hello my master, ${nameValue}!`;
   sayHello.classList.remove("hidden");
 }
 
@@ -18,6 +18,8 @@ loginForm.addEventListener("submit", greeting);
 
 if (localStorage.getItem(USERNAME_KEY)) {
   inputBox.classList.add("hidden");
-  sayHello.innerText = `Hello ${localStorage.getItem(USERNAME_KEY)}!`;
+  sayHello.innerText = `Hello my master, ${localStorage.getItem(
+    USERNAME_KEY
+  )}!`;
   sayHello.classList.remove("hidden");
 }
